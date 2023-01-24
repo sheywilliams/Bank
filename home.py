@@ -30,5 +30,10 @@ class home:
             mycursor.execute(myquery, val)
             mydb.commit()
             print('Account added successfully') 
-            
-home.start(0)           
+        elif q == 2:
+
+      
+
+
+
+home.start(0)
