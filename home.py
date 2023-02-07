@@ -1,17 +1,18 @@
 import mysql.connector
 mydb = mysql.connector.connect(host = 'localhost', user = 'root', passwd = '1seunwilliams!' , database  = 'bank')
 mycursor = mydb.cursor()
+# from transact import trans
 # mycursor.execute("CREATE DATABASE bank")
 # mycursor.execute("SHOW DATABASES")
 # for database in mycursor:
 #     print(database)
 import numpy as np
-# mycursor.execute('CREATE TABLE User (Full_name VARCHAR(50), Gender VARCHAR(1), Phone_No VARCHAR(11), Bank_Id INT(6), Bank_pin INT(10))')
+# mycursor.execute('CREATE TABLE User (Full_name VARCHAR(50), Gender VARCHAR(1), Phone_No VARCHAR(11), Bank_Id INT(6), Bank_pin INT(10), Deposits INT(30), Withdrawals INT(30), Balance INT(30))')
 # sql = 'DROP TABLE User'
 # mycursor.execute(sql)
 
 
-class home:
+class page:
     def __init__(self):
         self.start()
     def start(self):
@@ -30,10 +31,5 @@ class home:
             mycursor.execute(myquery, val)
             mydb.commit()
             print('Account added successfully') 
-        elif q == 2:
+page.start(0)
 
-      
-
-
-
-home.start(0)

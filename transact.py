@@ -56,9 +56,9 @@ class trans:
             print('Wrong login details, Try again')
             
     def one(self):
-        # dep = int(input('How much will you like to deposit into your account? >>>'))
-        dep = 1000
-        myquery = "UPDATE User SET User.Deposits=%s WHERE User.Bank_Id= %s"
+        dep = int(input('How much will you like to deposit into your account? >>>'))
+        # dep = 1000
+        myquery = "UPDATE User SET Deposits=%s WHERE Bank_Id= %s"
         val1 = (dep)
         mycursor.execute(myquery, [val1,])
         # mycursor.execute(myquery, {'dep':dep})
